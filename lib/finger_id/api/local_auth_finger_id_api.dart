@@ -36,12 +36,13 @@ class LocalAuthFingerPrintApi {
         options: AuthenticationOptions(
           // biometricOnly: true,
           biometricOnly: false,
+          //Show error dialog
           useErrorDialogs: true,
+          // Authenticate dialog sticks even if the app is switched
           stickyAuth: true,
         ),
+        //This message is displayed while authenticating
         localizedReason: 'Scan Fingerprint to Authenticate',
-
-
       );
     } on PlatformException catch (e) {
       log(e.code.toString());

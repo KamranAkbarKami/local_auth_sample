@@ -8,6 +8,7 @@ import 'package:local_auth/local_auth.dart';
 class LocalAuthFaceIdApi {
   static final _auth = LocalAuthentication();
 
+//check if the device supports the biometric
   static Future<bool> hasBiometrics() async {
     try {
       return await _auth.canCheckBiometrics;
